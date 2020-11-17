@@ -1,7 +1,8 @@
 {
     "name": "flagbit/schemaorg-email-body",
     "type": "library",
-    "description": "Library to render Order-Objects in html-template with schema.org scheme.",    "keywords": [
+    "description": "Library to render Order-Objects in html-template with schema.org scheme.",
+    "keywords": [
         "order",
         "email",
         "schema.org"
