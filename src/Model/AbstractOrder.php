@@ -15,13 +15,13 @@ abstract class AbstractOrder implements AbstractOrderInterface
         'OrderPickupAvailable',
         'OrderProblem',
         'OrderProcessing',
-        'OrderReturned'
+        'OrderReturned',
     ];
     /** @var string $orderNumber */
     private $orderNumber;
     /** @var string $orderStatus */
     private $orderStatus;
-    /** @var string $shopName **/
+    /** @var string $shopName */
     private $shopName;
 
     /**

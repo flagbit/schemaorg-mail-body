@@ -12,12 +12,12 @@ class ParcelDeliveryRenderer extends AbstractOrderRenderer implements ParcelDeli
      */
     public function render(ParcelDeliveryInterface $parcelDelivery): string
     {
-        $schemaOrgUrl = self::SCHEMA_ORG_URL;
-        $carrierContent = $this->renderCarrierContent($parcelDelivery);
+        $schemaOrgUrl          = self::SCHEMA_ORG_URL;
+        $carrierContent        = $this->renderCarrierContent($parcelDelivery);
         $trackingNumberContent = $this->renderTrackingNumberContent($parcelDelivery);
-        $merchantContent = $this->renderMerchantContent($parcelDelivery);
-        $orderNumberContent = $this->renderOrderNumberContent($parcelDelivery);
-        $orderStatusContent = $this->renderOrderStatusContent($parcelDelivery);
+        $merchantContent       = $this->renderMerchantContent($parcelDelivery);
+        $orderNumberContent    = $this->renderOrderNumberContent($parcelDelivery);
+        $orderStatusContent    = $this->renderOrderStatusContent($parcelDelivery);
 
         return <<<STRING
 <div itemscope itemtype="$schemaOrgUrl/ParcelDelivery">
@@ -30,7 +30,6 @@ class ParcelDeliveryRenderer extends AbstractOrderRenderer implements ParcelDeli
     $orderStatusContent
 </div>
 STRING;
-
     }
 
     /**
@@ -43,14 +42,13 @@ STRING;
     private function renderCarrierContent(ParcelDeliveryInterface $parcelDelivery): string
     {
         $schemaOrgUrl = self::SCHEMA_ORG_URL;
-        $carrierName = $parcelDelivery->getDeliveryName();
+        $carrierName  = $parcelDelivery->getDeliveryName();
 
         return <<<STRING
 <div itemprop="carrier" itemscope itemtype="$schemaOrgUrl/Organization">
     <meta itemprop="name" content="$carrierName"/>
 </div>
 STRING;
-
     }
 
     /**
@@ -67,6 +65,5 @@ STRING;
         return <<<STRING
 <meta itemprop="trackingNumber" content="$trackingNumber"/>
 STRING;
-
     }
 }

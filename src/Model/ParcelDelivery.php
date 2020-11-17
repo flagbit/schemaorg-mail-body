@@ -9,7 +9,6 @@ class ParcelDelivery extends AbstractOrder implements ParcelDeliveryInterface
 {
     /** @var string $deliveryName */
     private $deliveryName;
-
     /** @var string $trackingNumber */
     private $trackingNumber;
 

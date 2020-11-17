@@ -12,8 +12,8 @@ class OrderRenderer extends AbstractOrderRenderer implements OrderRendererInterf
      */
     public function render(OrderInterface $order): string
     {
-        $schemaOrgUrl = self::SCHEMA_ORG_URL;
-        $merchantContent = $this->renderMerchantContent($order);
+        $schemaOrgUrl       = self::SCHEMA_ORG_URL;
+        $merchantContent    = $this->renderMerchantContent($order);
         $orderNumberContent = $this->renderOrderNumberContent($order);
         $orderStatusContent = $this->renderOrderStatusContent($order);
 
@@ -23,6 +23,5 @@ class OrderRenderer extends AbstractOrderRenderer implements OrderRendererInterf
     $orderNumberContent
     $orderStatusContent
 STRING;
-
     }
 }

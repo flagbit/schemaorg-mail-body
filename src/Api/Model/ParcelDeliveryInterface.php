@@ -13,7 +13,13 @@ interface ParcelDeliveryInterface extends AbstractOrderInterface
      *
      * @return ParcelDeliveryInterface
      */
-    public function __construct(string $deliveryName, string $trackingNumber, string $orderNumber, string $orderStatus, string $shopName);
+    public function __construct(
+        string $deliveryName,
+        string $trackingNumber,
+        string $orderNumber,
+        string $orderStatus,
+        string $shopName
+    );
 
     /**
      * Set delivery name

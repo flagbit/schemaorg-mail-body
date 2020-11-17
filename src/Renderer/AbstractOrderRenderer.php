@@ -17,7 +17,7 @@ abstract class AbstractOrderRenderer
      */
     protected function renderMerchantContent(AbstractOrderInterface $abstractOrder): string
     {
-        $name = $abstractOrder->getShopName();
+        $name         = $abstractOrder->getShopName();
         $schemaOrgUrl = self::SCHEMA_ORG_URL;
 
         return <<<STRING
@@ -25,7 +25,6 @@ abstract class AbstractOrderRenderer
     <meta itemprop="name" content="$name"/>
 </div>
 STRING;
-
     }
 
     /**
@@ -42,7 +41,6 @@ STRING;
         return <<<STRING
 <meta itemprop="orderNumber" content="$number"/>
 STRING;
-
     }
 
     /**
@@ -55,11 +53,10 @@ STRING;
     protected function renderOrderStatusContent(AbstractOrderInterface $abstractOrder): string
     {
         $schemaOrgUrl = self::SCHEMA_ORG_URL;
-        $status = $abstractOrder->getOrderStatus();
+        $status       = $abstractOrder->getOrderStatus();
 
         return <<<STRING
 <link itemprop="orderStatus" href="$schemaOrgUrl/$status"/>
 STRING;
-
     }
 }
