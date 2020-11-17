@@ -7,9 +7,9 @@ use Api\Model\ParcelDeliveryInterface;
 interface ParcelDeliveryRendererInterface
 {
     /**
-     * @param ParcelDeliveryInterface $order
+     * @param ParcelDeliveryInterface $parcelDelivery
      *
      * @return string
      */
-    public function render(ParcelDeliveryInterface $order): string;
+    public function render(ParcelDeliveryInterface $parcelDelivery): string;
 }
