@@ -1,0 +1,22 @@
+{
+    "name": "flagbit/schemaorg-email-body",
+    "type": "library",
+    "description": "Library to render Order-Objects in html-template with schema.org scheme.",    "keywords": [
+        "order",
+        "email",
+        "schema.org"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Vogel",
+            "email": "michael.vogel@flagbit.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Model\\": "src/Model",
+            "Renderer\\": "src/Renderer"
+        }
+    }
+}
