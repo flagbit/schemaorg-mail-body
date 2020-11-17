@@ -38,9 +38,7 @@ STRING;
     {
         $number = $abstractOrder->getOrderNumber();
 
-        return <<<STRING
-<meta itemprop="orderNumber" content="$number"/>
-STRING;
+        return sprintf('<meta itemprop="orderNumber" content="%s"/>', $number);
     }
 
     /**
@@ -52,11 +50,10 @@ STRING;
      */
     protected function renderOrderStatusContent(AbstractOrderInterface $abstractOrder): string
     {
-        $schemaOrgUrl = self::SCHEMA_ORG_URL;
-        $status       = $abstractOrder->getOrderStatus();
-
-        return <<<STRING
-<link itemprop="orderStatus" href="$schemaOrgUrl/$status"/>
-STRING;
+        return sprintf(
+            '<link itemprop="orderStatus" href="%s/%s"/>',
+            self::SCHEMA_ORG_URL,
+            $abstractOrder->getOrderStatus()
+        );
     }
 }

@@ -59,10 +59,6 @@ STRING;
      */
     private function renderTrackingNumberContent(ParcelDeliveryInterface $parcelDelivery): string
     {
-        $trackingNumber = $parcelDelivery->getTrackingNumber();
-
-        return <<<STRING
-<meta itemprop="trackingNumber" content="$trackingNumber"/>
-STRING;
+        return sprintf('<meta itemprop="trackingNumber" content="%s"/>', $parcelDelivery->getTrackingNumber());
     }
 }
