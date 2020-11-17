@@ -2,7 +2,7 @@
 
 namespace Renderer;
 
-use Api\Model\AbstractOrderInterface;
+use Model\AbstractOrderInterface;
 
 abstract class AbstractOrderRenderer
 {

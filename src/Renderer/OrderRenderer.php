@@ -2,8 +2,7 @@
 
 namespace Renderer;
 
-use Api\Model\OrderInterface;
-use Api\Order\OrderRendererInterface;
+use Model\OrderInterface;
 
 class OrderRenderer extends AbstractOrderRenderer implements OrderRendererInterface
 {

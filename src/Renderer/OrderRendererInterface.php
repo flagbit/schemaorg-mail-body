@@ -1,8 +1,8 @@
 <?php
 
-namespace Api\Order;
+namespace Renderer;
 
-use Api\Model\OrderInterface;
+use Model\OrderInterface;
 
 interface OrderRendererInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Api\Order;
+namespace Renderer;
 
-use Api\Model\ParcelDeliveryInterface;
+use Model\ParcelDeliveryInterface;
 
 interface ParcelDeliveryRendererInterface
 {

@@ -2,7 +2,6 @@
 
 namespace Model;
 
-use Api\Model\ParcelDeliveryInterface;
 use InvalidArgumentException;
 
 class ParcelDelivery extends AbstractOrder implements ParcelDeliveryInterface

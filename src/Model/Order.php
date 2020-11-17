@@ -2,7 +2,6 @@
 
 namespace Model;
 
-use Api\Model\OrderInterface;
 use InvalidArgumentException;
 
 class Order extends AbstractOrder implements OrderInterface

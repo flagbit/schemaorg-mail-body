@@ -2,8 +2,7 @@
 
 namespace Renderer;
 
-use Api\Model\ParcelDeliveryInterface;
-use Api\Order\ParcelDeliveryRendererInterface;
+use Model\ParcelDeliveryInterface;
 
 class ParcelDeliveryRenderer extends AbstractOrderRenderer implements ParcelDeliveryRendererInterface
 {

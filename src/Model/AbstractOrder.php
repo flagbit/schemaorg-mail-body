@@ -2,8 +2,7 @@
 
 namespace Model;
 
-use Api\Model\AbstractOrderInterface;
-use Cassandra\Exception\InvalidArgumentException;
+use InvalidArgumentException;
 
 abstract class AbstractOrder implements AbstractOrderInterface
 {

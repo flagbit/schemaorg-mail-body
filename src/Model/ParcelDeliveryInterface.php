@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Model;
+namespace Model;
 
 interface ParcelDeliveryInterface extends AbstractOrderInterface
 {

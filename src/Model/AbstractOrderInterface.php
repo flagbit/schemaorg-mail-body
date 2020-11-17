@@ -1,6 +1,6 @@
 <?php
 
-namespace Api\Model;
+namespace Model;
 
 use InvalidArgumentException;
 
