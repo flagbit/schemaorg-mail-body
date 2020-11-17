@@ -19,5 +19,8 @@
             "Model\\": "src/Model",
             "Renderer\\": "src/Renderer"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }
