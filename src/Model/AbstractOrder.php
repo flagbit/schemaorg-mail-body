@@ -39,7 +39,7 @@ abstract class AbstractOrder implements AbstractOrderInterface
     public function setOrderStatus(string $status): AbstractOrderInterface
     {
         if (!in_array($status, self::POSSIBLE_ORDER_STATUS)) {
-            throw new InvalidArgumentException('Status is not one of the possible status.', '', '');
+            throw new InvalidArgumentException('Status is not one of the possible status.');
         }
         $this->orderStatus = $status;
 
