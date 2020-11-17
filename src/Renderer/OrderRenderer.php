@@ -21,6 +21,7 @@ class OrderRenderer extends AbstractOrderRenderer implements OrderRendererInterf
     $merchantContent
     $orderNumberContent
     $orderStatusContent
+</div>
 STRING;
     }
 }
