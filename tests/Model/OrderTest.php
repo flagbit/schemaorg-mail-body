@@ -5,14 +5,6 @@ use PHPUnit\Framework\TestCase;
 
 class OrderTest extends TestCase
 {
-    public function testCanBeCreatedWithValidParams(): void
-    {
-        $this->assertInstanceOf(
-            Order::class,
-            new Order('number', 'OrderDelivered', 'shop.com')
-        );
-    }
-
     public function testCannotBeCreatedWithInvalidOrderStatus(): void
     {
         $this->expectException(InvalidArgumentException::class);

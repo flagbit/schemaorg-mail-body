@@ -5,20 +5,6 @@ use PHPUnit\Framework\TestCase;
 
 class ParcelDeliveryTest extends TestCase
 {
-    public function testCanBeCreatedWithValidParams(): void
-    {
-        $this->assertInstanceOf(
-            ParcelDelivery::class,
-            new ParcelDelivery(
-                'delivery',
-                'tracking',
-                'number',
-                'OrderDelivered',
-                'shop.com'
-            )
-        );
-    }
-
     public function testCannotBeCreatedWithInvalidOrderStatus(): void
     {
         $this->expectException(InvalidArgumentException::class);
