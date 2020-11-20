@@ -4,17 +4,30 @@ namespace Renderer;
 
 use Model\OrderInterface;
 
-class OrderRenderer extends AbstractOrderRenderer implements OrderRendererInterface
+class OrderRenderer extends AbstractOrderRenderer implements RendererInterface
 {
+    /** @var OrderInterface $order */
+    private $order;
+
+    /**
+     * OrderRenderer constructor.
+     *
+     * @param OrderInterface $order
+     */
+    public function __construct(OrderInterface $order)
+    {
+        $this->order = $order;
+    }
+
     /**
      * @inheritDoc
      */
-    public function render(OrderInterface $order): string
+    public function render(): string
     {
         $schemaOrgUrl       = self::SCHEMA_ORG_URL;
-        $merchantContent    = $this->renderMerchantContent($order);
-        $orderNumberContent = $this->renderOrderNumberContent($order);
-        $orderStatusContent = $this->renderOrderStatusContent($order);
+        $merchantContent    = $this->renderMerchantContent($this->order);
+        $orderNumberContent = $this->renderOrderNumberContent($this->order);
+        $orderStatusContent = $this->renderOrderStatusContent($this->order);
 
         return <<<STRING
 <div itemscope itemtype="$schemaOrgUrl/Order">
