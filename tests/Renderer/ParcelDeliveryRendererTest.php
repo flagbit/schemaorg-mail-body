@@ -23,15 +23,15 @@ class ParcelDeliveryRendererTest extends TestCase
     <link itemprop="orderStatus" href="http://schema.org/OrderReturned"/>
 </div>
 STRING;
-        $order    = new ParcelDelivery(
+        $parcelDelivery    = new ParcelDelivery(
             'deliveryName',
             'trackingNumber',
             'orderNumber',
             'OrderReturned',
             'shop.com'
         );
-        $renderer = new ParcelDeliveryRenderer();
+        $renderer = new ParcelDeliveryRenderer($parcelDelivery);
 
-        $this->assertEquals($expected, $renderer->render($order));
+        $this->assertEquals($expected, $renderer->render());
     }
 }
