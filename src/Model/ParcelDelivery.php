@@ -1,6 +1,6 @@
 <?php
 
-namespace Model;
+namespace Flagbit\SchemaOrgMailBody\Model;
 
 use InvalidArgumentException;
 
