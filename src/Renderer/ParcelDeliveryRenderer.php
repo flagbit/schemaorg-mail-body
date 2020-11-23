@@ -4,19 +4,32 @@ namespace Renderer;
 
 use Model\ParcelDeliveryInterface;
 
-class ParcelDeliveryRenderer extends AbstractOrderRenderer implements ParcelDeliveryRendererInterface
+class ParcelDeliveryRenderer extends AbstractOrderRenderer implements RendererInterface
 {
+    /** @var ParcelDeliveryInterface $parcelDelivery */
+    private $parcelDelivery;
+
+    /**
+     * ParcelDeliveryRenderer constructor.
+     *
+     * @param ParcelDeliveryInterface $parcelDelivery
+     */
+    public function __construct(ParcelDeliveryInterface $parcelDelivery)
+    {
+        $this->parcelDelivery = $parcelDelivery;
+    }
+
     /**
      * @inheritDoc
      */
-    public function render(ParcelDeliveryInterface $parcelDelivery): string
+    public function render(): string
     {
         $schemaOrgUrl          = self::SCHEMA_ORG_URL;
-        $carrierContent        = $this->renderCarrierContent($parcelDelivery);
-        $trackingNumberContent = $this->renderTrackingNumberContent($parcelDelivery);
-        $merchantContent       = $this->renderMerchantContent($parcelDelivery);
-        $orderNumberContent    = $this->renderOrderNumberContent($parcelDelivery);
-        $orderStatusContent    = $this->renderOrderStatusContent($parcelDelivery);
+        $carrierContent        = $this->renderCarrierContent($this->parcelDelivery);
+        $trackingNumberContent = $this->renderTrackingNumberContent($this->parcelDelivery);
+        $merchantContent       = $this->renderMerchantContent($this->parcelDelivery);
+        $orderNumberContent    = $this->renderOrderNumberContent($this->parcelDelivery);
+        $orderStatusContent    = $this->renderOrderStatusContent($this->parcelDelivery);
 
         return <<<STRING
 <div itemscope itemtype="$schemaOrgUrl/ParcelDelivery">

@@ -18,8 +18,8 @@ class OrderRendererTest extends TestCase
 </div>
 STRING;
         $order = new Order('orderNumber', 'OrderPickupAvailable', 'shop.com');
-        $renderer = new OrderRenderer();
+        $renderer = new OrderRenderer($order);
 
-        $this->assertEquals($expected, $renderer->render($order));
+        $this->assertEquals($expected, $renderer->render());
     }
 }
