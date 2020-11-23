@@ -1,8 +1,10 @@
 <?php
 
-use Model\ParcelDelivery;
+namespace Flagbit\SchemaOrgMailBody\Tests;
+
+use Flagbit\SchemaOrgMailBody\Model\ParcelDelivery;
 use PHPUnit\Framework\TestCase;
-use Renderer\ParcelDeliveryRenderer;
+use Flagbit\SchemaOrgMailBody\Renderer\ParcelDeliveryRenderer;
 
 class ParcelDeliveryRendererTest extends TestCase
 {

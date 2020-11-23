@@ -1,8 +1,8 @@
 <?php
 
-namespace Renderer;
+namespace Flagbit\SchemaOrgMailBody\Renderer;
 
-use Model\OrderInterface;
+use Flagbit\SchemaOrgMailBody\Model\OrderInterface;
 
 class OrderRenderer extends AbstractOrderRenderer implements RendererInterface
 {

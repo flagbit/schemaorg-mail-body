@@ -1,6 +1,9 @@
-<?php declare(strict_types=1);
+<?php
 
-use Model\ParcelDelivery;
+namespace Flagbit\SchemaOrgMailBody\Tests;
+
+use Flagbit\SchemaOrgMailBody\Model\ParcelDelivery;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class ParcelDeliveryTest extends TestCase

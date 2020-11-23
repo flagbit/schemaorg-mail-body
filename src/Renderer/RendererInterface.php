@@ -1,6 +1,6 @@
 <?php
 
-namespace Renderer;
+namespace Flagbit\SchemaOrgMailBody\Renderer;
 
 interface RendererInterface
 {

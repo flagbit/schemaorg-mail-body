@@ -1,6 +1,9 @@
-<?php declare(strict_types=1);
+<?php
 
-use Model\Order;
+namespace Flagbit\SchemaOrgMailBody\Tests;
+
+use Flagbit\SchemaOrgMailBody\Model\Order;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class OrderTest extends TestCase
