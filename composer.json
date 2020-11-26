@@ -16,12 +16,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Flagbit\\SchemaOrgMailBody\\": "src/"
+            "EinsUndEins\\SchemaOrgMailBody\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flagbit\\SchemaOrgMailBody\\Tests\\": "tests/"
+            "EinsUndEins\\SchemaOrgMailBody\\Tests\\": "tests/"
         }
     },
     "require": {
