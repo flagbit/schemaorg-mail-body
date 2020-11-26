@@ -1,6 +1,6 @@
 <?php
 
-namespace EinsUndEins\SchemaOrgMailBody\Tests;
+namespace EinsUndEins\SchemaOrgMailBody\Tests\Renderer;
 
 use EinsUndEins\SchemaOrgMailBody\Model\Order;
 use EinsUndEins\SchemaOrgMailBody\Renderer\OrderRenderer;
