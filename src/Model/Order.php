@@ -17,8 +17,11 @@ class Order extends AbstractOrder implements OrderInterface
      */
     public function __construct(string $orderNumber, string $orderStatus, string $shopName)
     {
-        $this->setOrderStatus($orderStatus)
-            ->setOrderNumber($orderNumber)
-            ->setShopName($shopName);
+        if (!in_array($orderStatus, self::POSSIBLE_ORDER_STATUS)) {
+            throw new InvalidArgumentException('Status is not one of the possible status.');
+        }
+        $this->orderStatus = $orderStatus;
+        $this->orderNumber = $orderNumber;
+        $this->shopName = $shopName;
     }
 }

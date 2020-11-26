@@ -29,11 +29,14 @@ class ParcelDelivery extends AbstractOrder implements ParcelDeliveryInterface
         string $orderStatus,
         string $shopName
     ) {
-        $this->setOrderStatus($orderStatus)
-            ->setDeliveryName($deliveryName)
-            ->setTrackingNumber($trackingNumber)
-            ->setOrderNumber($orderNumber)
-            ->setShopName($shopName);
+        if (!in_array($orderStatus, self::POSSIBLE_ORDER_STATUS)) {
+            throw new InvalidArgumentException('Status is not one of the possible status.');
+        }
+        $this->orderStatus = $orderStatus;
+        $this->deliveryName = $deliveryName;
+        $this->trackingNumber = $trackingNumber;
+        $this->orderNumber = $orderNumber;
+        $this->shopName = $shopName;
     }
 
     /**
