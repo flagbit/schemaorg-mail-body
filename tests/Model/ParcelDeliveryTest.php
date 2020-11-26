@@ -1,8 +1,8 @@
 <?php
 
-namespace Flagbit\SchemaOrgMailBody\Tests;
+namespace EinsUndEins\SchemaOrgMailBody\Tests\Model;
 
-use Flagbit\SchemaOrgMailBody\Model\ParcelDelivery;
+use EinsUndEins\SchemaOrgMailBody\Model\ParcelDelivery;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

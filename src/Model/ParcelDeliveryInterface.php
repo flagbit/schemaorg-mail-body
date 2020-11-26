@@ -1,6 +1,6 @@
 <?php
 
-namespace Flagbit\SchemaOrgMailBody\Model;
+namespace EinsUndEins\SchemaOrgMailBody\Model;
 
 interface ParcelDeliveryInterface extends AbstractOrderInterface
 {
