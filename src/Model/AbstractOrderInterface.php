@@ -6,6 +6,17 @@ use InvalidArgumentException;
 
 interface AbstractOrderInterface
 {
+    public const POSSIBLE_ORDER_STATUS = [
+        'OrderCancelled',
+        'OrderDelivered',
+        'OrderInTransit',
+        'OrderPaymentDue',
+        'OrderPickupAvailable',
+        'OrderProblem',
+        'OrderProcessing',
+        'OrderReturned',
+    ];
+
     /**
      * Set order number
      *
