@@ -1,8 +1,8 @@
 <?php
 
-namespace Flagbit\SchemaOrgMailBody\Tests;
+namespace EinsUndEins\SchemaOrgMailBody\Tests;
 
-use Flagbit\SchemaOrgMailBody\Model\Order;
+use EinsUndEins\SchemaOrgMailBody\Model\Order;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
