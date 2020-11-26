@@ -6,16 +6,6 @@ use InvalidArgumentException;
 
 abstract class AbstractOrder implements AbstractOrderInterface
 {
-    private const POSSIBLE_ORDER_STATUS = [
-        'OrderCancelled',
-        'OrderDelivered',
-        'OrderInTransit',
-        'OrderPaymentDue',
-        'OrderPickupAvailable',
-        'OrderProblem',
-        'OrderProcessing',
-        'OrderReturned',
-    ];
     /** @var string $orderNumber */
     private $orderNumber;
     /** @var string $orderStatus */
