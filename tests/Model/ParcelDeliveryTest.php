@@ -1,6 +1,6 @@
 <?php
 
-namespace EinsUndEins\SchemaOrgMailBody\Tests;
+namespace EinsUndEins\SchemaOrgMailBody\Tests\Model;
 
 use EinsUndEins\SchemaOrgMailBody\Model\ParcelDelivery;
 use InvalidArgumentException;
