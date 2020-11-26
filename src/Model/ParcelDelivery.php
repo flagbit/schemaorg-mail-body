@@ -39,26 +39,6 @@ class ParcelDelivery extends AbstractOrder implements ParcelDeliveryInterface
     /**
      * @inheritDoc
      */
-    public function setDeliveryName(string $deliveryName): ParcelDeliveryInterface
-    {
-        $this->deliveryName = $deliveryName;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setTrackingNumber(string $trackingNumber): ParcelDeliveryInterface
-    {
-        $this->trackingNumber = $trackingNumber;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
     public function getDeliveryName(): string
     {
         return $this->deliveryName;

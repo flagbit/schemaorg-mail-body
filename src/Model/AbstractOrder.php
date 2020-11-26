@@ -14,34 +14,19 @@ abstract class AbstractOrder implements AbstractOrderInterface
     private $shopName;
 
     /**
-     * @inheritDoc
+     * Check if status is one of the order status list and set order status
+     *
+     * @param string $status
+     *
+     * @return $this
+     * @throws InvalidArgumentException
      */
-    public function setOrderNumber(string $number): AbstractOrderInterface
-    {
-        $this->orderNumber = $number;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setOrderStatus(string $status): AbstractOrderInterface
+    protected function setOrderStatus(string $status): AbstractOrderInterface
     {
         if (!in_array($status, self::POSSIBLE_ORDER_STATUS)) {
             throw new InvalidArgumentException('Status is not one of the possible status.');
         }
         $this->orderStatus = $status;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setShopName(string $name): AbstractOrderInterface
-    {
-        $this->shopName = $name;
 
         return $this;
     }
