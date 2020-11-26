@@ -1,8 +1,8 @@
 <?php
 
-namespace Flagbit\SchemaOrgMailBody\Renderer;
+namespace EinsUndEins\SchemaOrgMailBody\Renderer;
 
-use Flagbit\SchemaOrgMailBody\Model\ParcelDeliveryInterface;
+use EinsUndEins\SchemaOrgMailBody\Model\ParcelDeliveryInterface;
 
 class ParcelDeliveryRenderer extends AbstractOrderRenderer implements RendererInterface
 {

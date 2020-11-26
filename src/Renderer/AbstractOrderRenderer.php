@@ -1,8 +1,8 @@
 <?php
 
-namespace Flagbit\SchemaOrgMailBody\Renderer;
+namespace EinsUndEins\SchemaOrgMailBody\Renderer;
 
-use Flagbit\SchemaOrgMailBody\Model\AbstractOrderInterface;
+use EinsUndEins\SchemaOrgMailBody\Model\AbstractOrderInterface;
 
 abstract class AbstractOrderRenderer
 {
