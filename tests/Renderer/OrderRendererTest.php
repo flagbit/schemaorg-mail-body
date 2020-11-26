@@ -1,10 +1,10 @@
 <?php
 
-namespace Flagbit\SchemaOrgMailBody\Tests;
+namespace EinsUndEins\SchemaOrgMailBody\Tests;
 
-use Flagbit\SchemaOrgMailBody\Model\Order;
+use EinsUndEins\SchemaOrgMailBody\Model\Order;
+use EinsUndEins\SchemaOrgMailBody\Renderer\OrderRenderer;
 use PHPUnit\Framework\TestCase;
-use Flagbit\SchemaOrgMailBody\Renderer\OrderRenderer;
 
 class OrderRendererTest extends TestCase
 {
