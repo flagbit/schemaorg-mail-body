@@ -2,9 +2,7 @@
 
 namespace EinsUndEins\SchemaOrgMailBody\Model;
 
-use InvalidArgumentException;
-
-abstract class AbstractOrder implements AbstractOrderInterface
+abstract class AbstractOrder implements OrderInterface
 {
     /** @var string $orderNumber */
     protected $orderNumber;

@@ -2,7 +2,7 @@
 
 namespace EinsUndEins\SchemaOrgMailBody\Model;
 
-interface ParcelDeliveryInterface extends AbstractOrderInterface
+interface ParcelDeliveryInterface extends OrderInterface
 {
     /**
      * Get delivery name
