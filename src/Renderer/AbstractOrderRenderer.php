@@ -2,7 +2,7 @@
 
 namespace EinsUndEins\SchemaOrgMailBody\Renderer;
 
-use EinsUndEins\SchemaOrgMailBody\Model\AbstractOrderInterface;
+use EinsUndEins\SchemaOrgMailBody\Model\OrderInterface;
 
 abstract class AbstractOrderRenderer
 {
@@ -11,11 +11,11 @@ abstract class AbstractOrderRenderer
     /**
      * Render organization content
      *
-     * @param AbstractOrderInterface $abstractOrder
+     * @param OrderInterface $abstractOrder
      *
      * @return string
      */
-    protected function renderMerchantContent(AbstractOrderInterface $abstractOrder): string
+    protected function renderMerchantContent(OrderInterface $abstractOrder): string
     {
         $name         = $abstractOrder->getShopName();
         $schemaOrgUrl = self::SCHEMA_ORG_URL;
@@ -30,11 +30,11 @@ STRING;
     /**
      * Render order number content
      *
-     * @param AbstractOrderInterface $abstractOrder
+     * @param OrderInterface $abstractOrder
      *
      * @return string
      */
-    protected function renderOrderNumberContent(AbstractOrderInterface $abstractOrder): string
+    protected function renderOrderNumberContent(OrderInterface $abstractOrder): string
     {
         $number = $abstractOrder->getOrderNumber();
 
@@ -44,11 +44,11 @@ STRING;
     /**
      * Render order status content
      *
-     * @param AbstractOrderInterface $abstractOrder
+     * @param OrderInterface $abstractOrder
      *
      * @return string
      */
-    protected function renderOrderStatusContent(AbstractOrderInterface $abstractOrder): string
+    protected function renderOrderStatusContent(OrderInterface $abstractOrder): string
     {
         return sprintf(
             '<link itemprop="orderStatus" href="%s/%s"/>',

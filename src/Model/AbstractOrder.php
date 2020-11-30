@@ -2,49 +2,14 @@
 
 namespace EinsUndEins\SchemaOrgMailBody\Model;
 
-use InvalidArgumentException;
-
-abstract class AbstractOrder implements AbstractOrderInterface
+abstract class AbstractOrder implements OrderInterface
 {
     /** @var string $orderNumber */
-    private $orderNumber;
+    protected $orderNumber;
     /** @var string $orderStatus */
-    private $orderStatus;
+    protected $orderStatus;
     /** @var string $shopName */
-    private $shopName;
-
-    /**
-     * @inheritDoc
-     */
-    public function setOrderNumber(string $number): AbstractOrderInterface
-    {
-        $this->orderNumber = $number;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setOrderStatus(string $status): AbstractOrderInterface
-    {
-        if (!in_array($status, self::POSSIBLE_ORDER_STATUS)) {
-            throw new InvalidArgumentException('Status is not one of the possible status.');
-        }
-        $this->orderStatus = $status;
-
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setShopName(string $name): AbstractOrderInterface
-    {
-        $this->shopName = $name;
-
-        return $this;
-    }
+    protected $shopName;
 
     /**
      * @inheritDoc
